@@ -3,6 +3,7 @@ layout: post
 title: 机器学习之树模型
 tags: [Decision Tree, Bagging, Gradient Boosting]
 mathjax: true
+excerpt: "从基础决策树到集成学习方法（Bagging、Gradient Boosting），树模型如何凭借直观的可解释性与强大的拟合能力成为机器学习中的常用工具？本文梳理树模型的核心原理、优化策略及典型应用场景，帮你构建树模型的知识框架。"
 author: liuyu
 ---
 

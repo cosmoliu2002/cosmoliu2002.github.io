@@ -1,4 +1,10 @@
-# Transformer
+---
+layout: post
+title: Transformer
+tags: [Transformer, Self-Attention]
+mathjax: true
+author: liuyu
+---
 
 ## 注意力机制
 **自注意力的输出与输入的张量形状相同，均为（批量大小batch_size，时间步的数目或词元序列的长度num_step，隐藏层大小hidden_size）。**
@@ -179,7 +185,7 @@ class PositionalEncoding(nn.Block):
         return self.dropout(X)
 ```
 ## Transformer
-![1](transformer.jpg)
+![1](/assets/img/2025-03-06-Transformer-no-nonlinear-reason/transformer.jpg)
 ### nn.embedding
 `nn.Embedding` 是 PyTorch 中用于处理序列数据中的词嵌入（word embeddings）的核心模块。它本质上是一个查找表，将输入的离散型数据（通常是整数形式的单词索引）映射为连续型的数据表示（即词向量）。这种转换在自然语言处理（NLP）、推荐系统等领域中非常常见。
 

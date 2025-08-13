@@ -1,3 +1,11 @@
+---
+layout: post
+title: 香农熵、交叉熵和KL散度之间的联系
+tags: [entropy, cross entropy, KL divergence]
+mathjax: true
+author: liuyu
+---
+
 # 香农熵、交叉熵和KL散度
 ## 信息量
 对于一个事件来说，其信息量有三个特征：

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 香农熵、交叉熵和KL散度之间的联系
-tags: [entropy, cross entropy, KL divergence]
+tags: [Entropy, Cross Entropy, KL divergence]
 mathjax: true
 author: liuyu
 ---

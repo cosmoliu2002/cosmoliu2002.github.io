@@ -6,7 +6,7 @@ mathjax: true
 author: liuyu
 ---
 
-# 决策树
+## 决策树
 
 决策树顾名思义就是用决策树来做决定，可分为分类树和回归树，如下所示。
 ![1](/assets/img/2025-02-25-DecisionTree/1.png)

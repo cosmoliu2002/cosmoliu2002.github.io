@@ -1,63 +1,102 @@
 ---
-layout: page  # 保持页面布局（根据主题调整，如`layout: archive`等）
+layout: page
 title: 归档  
-permalink: /archives/  # 固定访问路径
+permalink: /archives/
 ---
 
-<!-- 可选：添加内联样式优化显示效果 -->
 <style>
 .archives {
   max-width: 800px;
   margin: 2rem auto;
+  padding: 0 1rem;
 }
+
+.archives-header {
+  margin: 2rem 0 3rem;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* 年份分组容器 */
+.year-group {
+  margin-bottom: 3rem;
+}
+
 /* 年份标题 */
-.archives h2 {
-  margin: 2rem 0 1rem;
+.year-title {
   font-size: 1.8rem;
   font-weight: 700;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eee;
 }
+
 /* 文章列表 */
-.archives ul {
+.post-list {
   list-style: none;
-  padding-left: 1.5rem;
-  margin-bottom: 2rem;
+  padding-left: 0;
 }
-.archives li {
-  margin: 0.5rem 0;
-  line-height: 1.6;
+
+.post-item {
+  margin: 0.8rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #f0f0f0;
+  transition: border-color 0.3s;
 }
-/* 日期样式 */
+
+.post-item:hover {
+  border-left-color: #666;
+}
+
 .post-date {
-  color: #666;
-  margin-right: 1.5rem;
+  color: #888;
+  margin-right: 1.2rem;
+  font-family: monospace;
+}
+
+.post-link {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.post-link:hover {
+  color: #0066cc;
+  text-decoration: underline;
 }
 </style>
 
 <div class="archives">
-  <h2>共计 {{ site.posts.size }} 篇文章</h2>  <!-- 显示文章总数 -->
-  {% for post in site.posts %}  <!-- 遍历所有文章（默认按发布时间倒序） -->
-    {% assign current_year = post.date | date: "%Y" %}  <!-- 获取当前文章年份 -->
+  <div class="archives-header">共计 {{ site.posts.size }} 篇文章</div>
+  
+  {% assign current_year = "" %} <!-- 初始化当前年份变量 -->
+  
+  {% for post in site.posts %}
+    {% assign post_year = post.date | date: "%Y" %} <!-- 获取当前文章年份 -->
     
-    <!-- 分组逻辑：当年份变化时，闭合上一个列表，开启新列表并显示年份标题 -->
-    {% if forloop.first %}  <!-- 第一篇文章，直接开启年份和列表 -->
-      <h2>{{ current_year }}</h2>
-      <ul>
-    {% else %}  <!-- 非第一篇，比较上一篇的年份 -->
-      {% assign prev_year = site.posts[forloop.index0 - 1].date | date: "%Y" %}
-      {% if current_year != prev_year %}  <!-- 年份不同时，闭合旧列表，开启新列表 -->
+    <!-- 当年份变化时，创建新的年份分组 -->
+    {% if post_year != current_year %}
+      {% assign current_year = post_year %} <!-- 更新当前年份 -->
+      
+      <!-- 闭合上一个年份的列表（如果不是第一个分组） -->
+      {% if forloop.index0 != 0 %}
         </ul>
-        <h2>{{ current_year }}</h2>
-        <ul>
       {% endif %}
+      
+      <!-- 新的年份分组 -->
+      <div class="year-group">
+        <h2 class="year-title">{{ current_year }}</h2>
+        <ul class="post-list">
     {% endif %}
     
-    <!-- 显示单篇文章：月-日 + 标题链接 -->
-    <li>
+    <!-- 文章条目 -->
+    <li class="post-item">
       <span class="post-date">{{ post.date | date: "%m-%d" }}</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}" class="post-link">{{ post.title }}</a>
     </li>
     
-    {% if forloop.last %}  <!-- 最后一篇文章，闭合列表 -->
+    <!-- 最后一篇文章时闭合列表 -->
+    {% if forloop.last %}
       </ul>
     {% endif %}
   {% endfor %}

@@ -3,7 +3,7 @@ layout: post
 title: 从零实现PositionalEncoding与MultiHeadAttention
 tags: [PositionalEncoding, MultiHeadAttention]
 mathjax: true
-excerpt: ""
+excerpt: "Transformer 架构的两大核心组件如何从零搭建？本文手把手带你实现 PositionalEncoding（位置编码）与 MultiHeadAttention（多头注意力），拆解位置信息注入的数学原理与注意力机制的并行计算逻辑，适合想深入理解 Transformer 内部机制的学习者。"
 author: liuyu
 ---
 

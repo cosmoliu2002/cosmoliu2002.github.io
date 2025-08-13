@@ -3,6 +3,7 @@ layout: post
 title: Transformer中的Self-Attention未引入非线性操作
 tags: [Transformer, Self-Attention]
 mathjax: true
+excerpt: "自注意力机制的输出为何与输入张量形状完全一致？（批量大小 × 时间步长 × 隐藏层大小）本文聚焦 Transformer 中 Self-Attention 的结构特性，解析其未引入非线性操作的设计逻辑及对模型表达能力的影响。"
 author: liuyu
 ---
 

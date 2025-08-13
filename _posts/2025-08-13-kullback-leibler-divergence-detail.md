@@ -16,6 +16,8 @@ author: liuyu
 
 ![1](https://github.com/cosmoliu2002/cosmoliu2002.github.io/blob/main/assets/img/2025-08-13-kullback-leibler-divergence-detail/1.png){: .mx-auto.d-block :}
 
+![Crepe](https://beautifuljekyll.com/assets/img/crepe.jpg){: .mx-auto.d-block :}
+
 1. 一个事件发生概率的倒数取log即为一个事件的信息量。  
 2. 式中概率的倒数表示信息量与事件的概率成反比。  
 3. 取log是由于独立事件的联合概率为各个事件发生概率的乘积，取log可以使得独立事件的信息量变为相加。

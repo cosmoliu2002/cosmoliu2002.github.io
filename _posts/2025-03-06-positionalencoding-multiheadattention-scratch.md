@@ -3,8 +3,8 @@ layout: post
 title: 从零实现PositionalEncoding与MultiHeadAttention
 tags: [PositionalEncoding, MultiHeadAttention]
 mathjax: true
-author: liuyu
 show_excerpt: false
+author: liuyu
 ---
 
 ### 位置编码

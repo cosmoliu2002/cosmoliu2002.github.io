@@ -1,3 +1,11 @@
+---
+layout: post
+title: nn.embedding原理详解
+tags: [Torch, Embedding]
+mathjax: true
+author: liuyu
+---
+
 ### nn.embedding
 `nn.Embedding` 是 PyTorch 中用于处理序列数据中的词嵌入（word embeddings）的核心模块。它本质上是一个查找表，将输入的离散型数据（通常是整数形式的单词索引）映射为连续型的数据表示（即词向量）。这种转换在自然语言处理（NLP）、推荐系统等领域中非常常见。
 

@@ -3,6 +3,7 @@ layout: post
 title: nn.embedding原理详解
 tags: [Torch, Embedding]
 mathjax: true
+excerpt: "PyTorch 中处理词嵌入的核心模块究竟是什么？nn.Embedding 本质是一张「离散到连续的映射表」，将整数形式的单词索引转化为稠密词向量，为 NLP、推荐系统等场景提供关键的语义表示能力。本文详解其工作原理、使用场景及核心特性。"
 author: liuyu
 ---
 

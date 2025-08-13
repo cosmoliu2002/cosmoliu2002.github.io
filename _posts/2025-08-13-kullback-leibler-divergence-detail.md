@@ -3,6 +3,7 @@ layout: post
 title: 香农熵、交叉熵和KL散度之间的联系
 tags: [Entropy, Cross Entropy, KL divergence]
 mathjax: true
+excerpt: "信息量的核心特征是什么？为什么事件概率越小，蕴含的信息量越大？独立事件的信息量又为何能直接相加？本文深入解析香农熵、交叉熵与 KL 散度的底层逻辑，揭示三者在信息度量与模型优化中的内在关联，帮你理清机器学习中核心信息论概念的脉络。"
 author: liuyu
 ---
 

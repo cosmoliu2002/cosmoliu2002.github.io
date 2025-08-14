@@ -3,6 +3,7 @@ title: Hello World
 date: 2019/06/08 17:00:00
 comments: true
 id: helloworld
+excerpt: ""
 categories:
   - [Sports, Baseball]
   - [MLB, American League, Boston Red Sox]

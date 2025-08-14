@@ -2,7 +2,7 @@
 title: 香农熵、交叉熵和KL散度之间的联系
 date: 2025-03-20 07:54:28
 comments: true
-id: entropy_cross_entropy_kl
+id: entropy-cross-entropy-kl
 excerpt: ""
 math: true
 categories:

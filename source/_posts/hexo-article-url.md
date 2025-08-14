@@ -5,7 +5,7 @@ categories:
   - [Hexo]
 id: hexo-url-setting
 tags:
-  - Setting
+  - Hexo
 ---
 
 hexo文章的url在博客根目录的_config.yml中进行配置，默认配置如下：

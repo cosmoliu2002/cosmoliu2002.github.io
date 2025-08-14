@@ -13,8 +13,8 @@ tags:
 ## 决策树
 
 决策树顾名思义就是用决策树来做决定，可分为分类树和回归树，如下所示。
-![1](/assets/img/2025-02-25-DecisionTree/1.png)
-![2](/assets/img/2025-02-25-DecisionTree/2.png)
+![1](/img/decision_tree/1.png)
+![2](/img/decision_tree/2.png)
 
 优点: 
 1. 模型可解释。

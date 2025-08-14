@@ -1,6 +1,6 @@
 ---
 title: nn.embedding原理详解
-date: 2025-03-06
+date: 2025-03-06 19:54:28
 comments: true
 id: embedding-detail
 excerpt: ""

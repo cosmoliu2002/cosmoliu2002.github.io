@@ -4,6 +4,7 @@ comments: true
 categories:
   - [Hexo]
 id: hexo-url-setting
+excerpt: 介绍Hexo文章url两种常见的设置方法和url自定义规则。
 tags:
   - Hexo
 ---

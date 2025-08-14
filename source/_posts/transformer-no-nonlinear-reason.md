@@ -3,7 +3,7 @@ title: Transformer中的Self-Attention未引入非线性操作
 date: 2025-03-11 21:54:28
 comments: true
 id: self-attn-no-nonlinear
-excerpt: ""
+excerpt: 详细解释Transformer中的Self-Attention未引入非线性操作的原因和设计。
 categories:
   - [Machine Learning, Deep Learning]
 tags:

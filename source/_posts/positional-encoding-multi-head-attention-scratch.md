@@ -3,7 +3,7 @@ title: 从零实现PositionalEncoding与MultiHeadAttention
 date: 2025-03-06 10:54:28
 comments: true
 id: pos-encode-mha-scratch
-excerpt: ""
+excerpt: 沐神的动手学深度学习里的PositionalEncoding与MultiHeadAttention从零实现，包括封装好的d2l库中的函数实现。
 categories:
   - [Machine Learning, Deep Learning]
 tags:

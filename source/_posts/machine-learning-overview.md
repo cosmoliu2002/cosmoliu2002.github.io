@@ -3,7 +3,7 @@ title: 机器学习算法总览
 date: 2025-02-02 16:54:28
 comments: true
 id: ml-overview
-excerpt: ""
+excerpt: 介绍机器学习算法分类及各自子类。
 categories:
   - [Machine Learning]
 tags:

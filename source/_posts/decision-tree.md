@@ -3,7 +3,7 @@ title: 机器学习之树模型
 date: 2025-02-25 15:54:28
 comments: true
 id: ml-tree-overview
-excerpt: 简单介绍机器学习中的决策树及其两种改进策略：随机森林和梯度提升的概念及优缺点。
+excerpt: ""
 categories:
   - [Machine Learning]
 tags:

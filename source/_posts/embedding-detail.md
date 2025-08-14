@@ -3,7 +3,7 @@ title: nn.embedding原理详解
 date: 2025-03-06 19:54:28
 comments: true
 id: embedding-detail
-excerpt: 详细介绍pytorch的embedding函数原理并举例具体说明。
+excerpt: ""
 categories:
   - [Machine Learning, Deep Learning]
 tags:

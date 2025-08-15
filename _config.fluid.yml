@@ -929,7 +929,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/ankeleiqi.png
   banner_img_height: 100
   banner_mask_alpha: 0
 
@@ -958,7 +958,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/sailimuhu.png
   banner_img_height: 100
   banner_mask_alpha: 0
   tagcloud:
@@ -975,7 +975,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/B0006674.jpg
   banner_img_height: 70
   banner_mask_alpha: 0
   avatar: /img/avatar/avatar.png

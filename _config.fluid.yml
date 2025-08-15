@@ -554,7 +554,7 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/archive_bg.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
 
@@ -918,7 +918,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/archive_bg.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
 
@@ -929,7 +929,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/bg/ankeleiqi.png
+  banner_img: /img/bg/ankeleiqi.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
 
@@ -958,7 +958,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/bg/sailimuhu.png
+  banner_img: /img/bg/sailimuhu.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
   tagcloud:
@@ -975,7 +975,7 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/bg/B0006674.jpg
+  banner_img: /img/bg/B0006674_compressed.png
   banner_img_height: 70
   banner_mask_alpha: 0
   avatar: /img/avatar/avatar.png
@@ -997,7 +997,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/archive_bg.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
 
@@ -1008,7 +1008,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/archive_bg.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
   # 重定向到首页的延迟(毫秒)
@@ -1022,7 +1022,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/bg/archive_bg.png
+  banner_img: /img/bg/archive_bg.jpeg
   banner_img_height: 100
   banner_mask_alpha: 0
   # 友链的成员项

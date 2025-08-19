@@ -1,5 +1,6 @@
 ---
 title: Hexo文章url设置方法
+date: 2025-08-14 18:15:28
 comments: true
 categories:
   - [Hexo]

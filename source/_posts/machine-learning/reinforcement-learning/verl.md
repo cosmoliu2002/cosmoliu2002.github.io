@@ -67,7 +67,7 @@ def apply_kl_penalty(data: DataProto, kl_ctrl: core_algos.AdaptiveKLController, 
 - `RayPPOTrainer` 类的 `fit` 函数，实现了 rl 算法的完整的 training loop，调用了各个 worker 进行实际的计算
 
 > 1. REINFORCE算法介绍
-> - 核心思想：运行一个回合，如果总回报高，就增大这个回合中所有动作的概率；如果回报低，就减小概率。它直接利用整个回合的回报 $$G_t$$ （相当于 PPO 的优势）作为更新尺度。
+> - 核心思想：运行一个回合，如果总回报高，就增大这个回合中所有动作的概率；如果回报低，就减小概率。它直接利用整个回合的回报 $G_t$ （相当于 PPO 的优势）作为更新尺度。
 > - 伪代码
 
 > ```python

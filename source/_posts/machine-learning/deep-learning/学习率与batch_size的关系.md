@@ -40,9 +40,9 @@ OpenAI的《An Empirical Model of Large-Batch Training》通过损失函数的�
 
 $$B \ll \mathcal{B}_{\text{noise}}$$
 
-$1 + \mathcal{B}_{\text{noise}} / B \approx \mathcal{B}_{\text{noise}} / B$
+$$1 + B_{\text{noise}} / B \approx B_{\text{noise}} / B$$
 
-$\eta^* \approx \eta_{\text{max}} B / \mathcal{B}_{\text{noise}} \propto B$
+$$\eta^* \approx \eta_{\text{max}} B / \mathcal{B}_{\text{noise}} \propto B$$
 
 即线性缩放，这再次体现了线性缩放只是小Batch Size时的局部近似；当$B > \mathcal{B}_{\text{noise}}$时，$\eta^*$逐渐趋于饱和值$\eta_{\text{max}}$，这意味着训练成本的增加远大于训练效率的提升。所以，$\mathcal{B}_{\text{noise}}$相当于一个分水岭，当Batch Size超过这个数值时，就没必要继续投入算力去增大Batch Size了。
 

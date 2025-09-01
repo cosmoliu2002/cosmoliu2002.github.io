@@ -46,6 +46,8 @@ $$\eta^* \approx \eta_{\text{max}} B / \mathcal{B}_{\text{noise}} \propto B$$
 
 即线性缩放，这再次体现了线性缩放只是小Batch Size时的局部近似；当 $B > \mathcal{B}_{\text{noise}}$ 时， $\eta^*$ 逐渐趋于饱和值 $\eta_{\text{max}}$ ，这意味着训练成本的增加远大于训练效率的提升。所以，$\mathcal{B}_{\text{noise}}$ 相当于一个分水岭，当Batch Size超过这个数值时，就没必要继续投入算力去增大Batch Size了。
 
+即线性缩放，这再次体现了线性缩放只是小 Batch Size 时的局部近似；当 $B > \mathcal{B}_{\text{noise}}$ 时，$\eta^*$ 逐渐趋于饱和值 $\eta_{\max}$，这意味着训练成本的增加远大于训练效率的提升。所以，$\mathcal{B}_{\text{noise}}$ 相当于一个分水岭，当 Batch Size 超过这个数值时，就没必要继续投入算力去增大 Batch Size 了。
+
 # 数据效率
 
 $\left( \frac{S}{S_{\text{min}}} - 1 \right) \left( \frac{E}{E_{\text{min}}} - 1 \right) = 1$

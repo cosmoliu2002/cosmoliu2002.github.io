@@ -14,20 +14,21 @@ tags:
 ### 位置编码
 ```
 #@save
-class PositionalEncoding(nn.Block):
+class PositionalEncoding(nn.Module):
     """位置编码"""
     def __init__(self, num_hiddens, dropout, max_len=1000):
         super(PositionalEncoding, self).__init__()
         self.dropout = nn.Dropout(dropout)
-        # 创建一个足够长的P, P的长度max_len对应输入X的第2维度时间步数或序列长度
-        self.P = np.zeros((1, max_len, num_hiddens))
-        X = np.arange(max_len).reshape(-1, 1) / np.power(
-            10000, np.arange(0, num_hiddens, 2) / num_hiddens)
-        self.P[:, :, 0::2] = np.sin(X) # [0::2]表示数组切片操作，从0开始，未设置结束索引，步长为2
-        self.P[:, :, 1::2] = np.cos(X) # 与上同理
+        # 创建一个足够长的P
+        self.P = torch.zeros((1, max_len, num_hiddens))
+        X = torch.arange(max_len, dtype=torch.float32).reshape(
+            -1, 1) / torch.pow(10000, torch.arange(
+            0, num_hiddens, 2, dtype=torch.float32) / num_hiddens)
+        self.P[:, :, 0::2] = torch.sin(X)
+        self.P[:, :, 1::2] = torch.cos(X)
 
     def forward(self, X):
-        X = X + self.P[:, :X.shape[1], :].as_in_ctx(X.ctx)
+        X = X + self.P[:, :X.shape[1], :].to(X.device)
         return self.dropout(X)
 ```
 
@@ -81,7 +82,7 @@ def sequence_mask(X, valid_lens, value=-1e6):
 ### 缩放点积注意力
 ```
 #@save
-class DotProductAttention(nn.Block):
+class DotProductAttention(nn.Module):
     """缩放点积注意力"""
     def __init__(self, dropout, **kwargs):
         super(DotProductAttention, self).__init__(**kwargs)
@@ -94,9 +95,9 @@ class DotProductAttention(nn.Block):
     def forward(self, queries, keys, values, valid_lens=None):
         d = queries.shape[-1]
         # 设置transpose_b=True为了交换keys的最后两个维度
-        scores = npx.batch_dot(queries, keys, transpose_b=True) / math.sqrt(d)
+        scores = torch.bmm(queries, keys.transpose(1,2)) / math.sqrt(d)
         self.attention_weights = masked_softmax(scores, valid_lens)
-        return npx.batch_dot(self.dropout(self.attention_weights), values)
+        return torch.bmm(self.dropout(self.attention_weights), values)
 ```
 
 ### 多头注意力
